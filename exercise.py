@@ -94,5 +94,33 @@ def islandPerimeter_463(grid):
                     count += 1
     return count
 
-test = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]
-print islandPerimeter_463(test)
+# test = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]
+# print islandPerimeter_463(test)
+def canWinNim_292(n):
+    return bool(n % 4 != 0)
+
+
+def findMaxConsecutiveOnes_485(self, nums):
+    cnt = 0
+    ans = 0
+    for num in nums:
+        if num == 1:
+            cnt += 1
+            ans = max(ans, cnt)
+        else:
+            cnt = 0
+    return ans
+
+list = [1,2,3,1,2]
+list2 = [1,2]
+test = list*2
+
+res = 0
+for num in list:
+    res ^= num
+    print "inner: ",res
+print res
+def singleNumber_136(nums):
+    return 2*sum(set(nums))-sum(nums)
+
+print singleNumber_136(list)
